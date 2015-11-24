@@ -1,0 +1,105 @@
+.wrapper{
+	height: 87.4vh;
+	position: relative;
+    top: 4px;
+}
+.tab{
+	color: #4E4444;
+	border-right: 1px solid rgb(204, 204, 204);
+	background-color: #ccc;
+	display: block;
+}
+.tab ul{
+	width: 100%;
+}
+.tab ul li{
+	background-color: #ccc;
+	border-bottom: 1px solid rgb(150,150,150);
+	position: relative;
+	right: -1px;
+	height: inherit;
+    padding: 15px;
+	width: 100%;
+	font-weight: 600;
+	cursor: default;
+}
+.tab ul li.th_active{
+	background-color: #FFF;
+	border: 1px solid #FFF;
+}
+.tab_container {
+    display: block;
+	overflow: auto;
+}
+.tab_container div{
+	background-color: #FFF;
+	display: none;
+	padding: 30px;
+}
+.tab_container .tc_active{
+	display: block;
+}
+fieldset {
+    padding: 20px;
+    font-size: large;
+    border-color: #B6FDB6;
+    color: #00C000;
+}
+textarea {
+    margin: 10px 0px;
+	padding: 6px;
+    width: 100%;
+    resize: none;
+    overflow: auto;
+	font-size: large;
+}
+input[type="text"],
+input[type="number"] {
+    padding: 6px;
+    margin: 5px 0px;
+    width: 100%;
+    font-size: inherit;
+}
+input[type="submit"] {
+    margin: 5px 0px;
+    padding: 10px 15px;
+    font-size: inherit;
+    background-color: rgba(0,230,0,0.8);
+    color: #FFF;
+    border: 0;
+}
+.login input[type="password"]:focus,
+input[type="text"]:focus,
+input[type="submit"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+    outline-color: rgb(41, 228, 41);
+}
+table {
+    width: 100%;
+}
+table, th, td {
+    border: 1px solid rgb(0, 204, 0);
+    border-collapse: collapse;
+    padding: 12px;
+    text-align: center;
+}
+table tr th{
+	color: #FFF;
+    background-color: rgba(41,228,41,0.7);
+}
+table tr:nth-child(2n) {
+    color: #34B52A;
+}
+table tr:nth-child(2n+1) {
+    background-color: rgba(100,255,40,0.2);
+	color: rgb(52, 181, 42);
+}
+.tab_container div.error{
+    display: block;
+    padding: 0px;
+}
+.tab_container div.success {
+    display: block;
+    padding: 0px;
+}
