@@ -10,7 +10,7 @@
 			foreach ($query->result() as $row)
 			{
 			    if($row->user == $u && $row->pass == $p){
-					return TRUE;
+					return $row->user_type;
 				}
 			}
 			return FALSE;

@@ -4,54 +4,57 @@
 			<h1>QuizBitz</h1>
 		</div>
 		<div class="timer col-8">
-			<div>
-				<ul>
-					<li><h3 id="hr10_v">0</h3></li>
-					<li><h3 id="hr10_i">0</h3></li>
-				</ul>
+			<div class="timer_body row">
+				<div>
+					<ul>
+						<li><h3 id="hr10_v">0</h3></li>
+						<li><h3 id="hr10_i">0</h3></li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<li><h3 id="hr_v">0</h3></li>
+						<li><h3 id="hr_i">0</h3></li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<li><h3>:</h3></li>
+						<li><h3>:</h3></li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<li><h3 id="min10_v">0</h3></li>
+						<li><h3 id="min10_i">0</h3></li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<li><h3 id="min_v">0</h3></li>
+						<li><h3 id="min_i">0</h3></li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<li><h3>:</h3></li>
+						<li><h3>:</h3></li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<li><h3 id="sec10_v">0</h3></li>
+						<li><h3 id="sec10_i">0</h3></li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<li><h3 id="sec_v">0</h3></li>
+						<li><h3 id="sec_i">0</h3></li>
+					</ul>
+				</div>
 			</div>
-			<div>
-				<ul>
-					<li><h3 id="hr_v">0</h3></li>
-					<li><h3 id="hr_i">0</h3></li>
-				</ul>
-			</div>
-			<div>
-				<ul>
-					<li><h3>:</h3></li>
-					<li><h3>:</h3></li>
-				</ul>
-			</div>
-			<div>
-				<ul>
-					<li><h3 id="min10_v">0</h3></li>
-					<li><h3 id="min10_i">0</h3></li>
-				</ul>
-			</div>
-			<div>
-				<ul>
-					<li><h3 id="min_v">0</h3></li>
-					<li><h3 id="min_i">0</h3></li>
-				</ul>
-			</div>
-			<div>
-				<ul>
-					<li><h3>:</h3></li>
-					<li><h3>:</h3></li>
-				</ul>
-			</div>
-			<div>
-				<ul>
-					<li><h3 id="sec10_v">0</h3></li>
-					<li><h3 id="sec10_i">0</h3></li>
-				</ul>
-			</div>
-			<div>
-				<ul>
-					<li><h3 id="sec_v">0</h3></li>
-					<li><h3 id="sec_i">0</h3></li>
-				</ul>
-			</div>
+			<a class="logout" href="<?php echo base_url().'index.php/login/logout'?>">Logout</a>
 		</div> 
 	</div><!--row-->
 </header>

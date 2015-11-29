@@ -2,11 +2,15 @@
 	color: #FFF;
 	font-size: x-large;
 }
-.timer div{
+.timer_body{
 	position: relative;
-    left: 80%;
+    left: 20%;
 	height: 20px;
 	overflow: hidden;
+}
+.timer div div{
+	position: relative;
+    float: left;
 }
 .que{
 	padding: 20px 20px 10px;
@@ -84,4 +88,12 @@
 	animation: digitup 1s infinite;
 	top: 0px;
 	display: none;
+}
+.logout{
+	text-decoration: none;
+    color: #FFF;
+    font-weight: 700;
+    position: relative;
+    left: 70%;
+    font-size: 25px;
 }

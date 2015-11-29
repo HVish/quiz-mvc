@@ -16,6 +16,7 @@
 			<li>List of Questions</li>
 			<li>Marking Schemes</li>
 			<li>Results</li>
+			<li>Account</li>
 		</ul>
 	</div>
 	<div class="col-10 tab_container">
@@ -106,6 +107,11 @@
 					}
 				?>
 			</table>
+		</div>
+		<div>
+			<form method="post" action="<?php echo base_url().'index.php/login/logout'?>">
+				<input type="submit" name="logout" value="Log Out">
+			</form>
 		</div>
 	</div>
 </div>

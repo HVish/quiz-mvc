@@ -24,36 +24,41 @@ class Admin extends CI_Controller {
 	}
 	public function index($e = '')
 	{
-		$data['msg']['adderror'] = "";
-		$data['msg']['addsuccess'] = "";
-		
-		$data['msg']['merror'] = "";
-		$data['msg']['msuccess'] = "";
-		
-		$data['list_table_data'] = $this->ModelAdmin->listq();
-		$data['list_table_result'] = $this->ModelAdmin->list_result();
-		
-		if(!empty($e)){
-			switch($e){
-				case 'adderror':
-					$data['msg']['adderror'] = "Question Couldn't be added!";
-					break;
-				case 'addsuccess':
-					$data['msg']['addsuccess'] = "Question is successfully added!";
-					$data['list_table_data'] = $this->ModelAdmin->listq();
-					break;
-				case 'merror':
-					$data['msg']['merror'] = "Scheme Couldn't be Updated!";
-					break;
-				case 'msuccess':
-					$data['msg']['msuccess'] = "Scheme is successfully Updated!";
-					break;
+		$id = $this->session->user_type;
+		if($id != "Examiner"){
+			redirect(base_url());
+		}else{
+			$data['msg']['adderror'] = "";
+			$data['msg']['addsuccess'] = "";
+			
+			$data['msg']['merror'] = "";
+			$data['msg']['msuccess'] = "";
+			
+			$data['list_table_data'] = $this->ModelAdmin->listq();
+			$data['list_table_result'] = $this->ModelAdmin->list_result();
+			
+			if(!empty($e)){
+				switch($e){
+					case 'adderror':
+						$data['msg']['adderror'] = "Question Couldn't be added!";
+						break;
+					case 'addsuccess':
+						$data['msg']['addsuccess'] = "Question is successfully added!";
+						$data['list_table_data'] = $this->ModelAdmin->listq();
+						break;
+					case 'merror':
+						$data['msg']['merror'] = "Scheme Couldn't be Updated!";
+						break;
+					case 'msuccess':
+						$data['msg']['msuccess'] = "Scheme is successfully Updated!";
+						break;
+				}
 			}
+			
+			$this->load->view('header');
+			$this->load->view('admin',$data);
+			$this->load->view('footer');
 		}
-		
-		$this->load->view('header');
-		$this->load->view('admin',$data);
-		$this->load->view('footer');
 	}
 	public function addque(){
 		$q = $this->input->post('que');
